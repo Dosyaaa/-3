@@ -35,34 +35,51 @@ if city == "Баткен"{
 print("Введите город в котором хотите узнать прогноз погоды на ближайшие 3 дня:")
 
 //2-ое задание
-print("Ваши товары:")
+var nitro = 65
+var milk = 80
+var eggs = 100
+var potato = 70
+var cheese = 200
+var Itog: Double = 0.0
+var Skidka: Double = 0.0
+var ItogString = ""
 
-var Nitro = readLine()!
-if Nitro.count == 5{
-    print("Цена: 65сом")
+func pokupka(n: Int,name: String){
+    Itog += Double(n)
+    ItogString = "\(name) - \(n)"
 }
-var Banana = readLine()!
-if Banana.count == 6{
-    print("Цена: 104сома")
-}
-var Sigi = readLine()!
-if Sigi.count == 8{
-    print("Цена: 126сом")
-}
-var Juicewrld = readLine()!
-if Juicewrld.count == 3{
-    print("Цена: 80сом")
-}
-var Ukulele = readLine()!
-if Ukulele.count == 7{
-    print("Цена: 12000сом")
-}
-
-let chek = readLine()!
-let a: Double = ((65 + 104 + 126 + 80 + 12000) * 0.05)
-let N1: Double = (65 + 104 + 126 + 80 + 12000)
-func chek(N1: Double,a: Double){
-    print("Итоговая цена покупки с учетом скидки в 5% = \(N1 - a)")
-}
-chek(N1: N1,a: a)
+    func thing(name: String) -> Int{
+        
+        if name.lowercased() == "нитро" {
+            return nitro
+        }else if name.lowercased() == "молоко"{
+            return milk
+        }else if name.lowercased() == "яйца"{
+            return eggs
+        }else if name.lowercased() == "картошка"{
+            return potato
+        }else if name.lowercased() == "сыр"{
+            return cheese
+        }else {
+            print("Отсутствует")
+            print("Введите другое")
+            let product = readLine()!
+            return thing(name: product)
+        }
+    }
+    print("Введите продукт который вам нужен:")
+    
+    let product1 = readLine()!
+    pokupka(n: thing(name: product1), name: product1)
+    let product2 = readLine()!
+    pokupka(n: thing(name: product2), name: product2)
+    let product3 = readLine()!
+    pokupka(n: thing(name: product3), name: product3)
+    let product4 = readLine()!
+    pokupka(n: thing(name: product4), name: product4)
+    let product5 = readLine()!
+    pokupka(n: thing(name: product5), name: product5)
+Skidka = Itog * 0.05
+    let damn = "\(Itog) сом. Скидка =\(Skidka)\n Итоговая сумма = \(Itog - Skidka)"
+    print("Итоговая сумма со скидкой:\(Itog - Skidka)")
 
