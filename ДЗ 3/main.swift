@@ -11,48 +11,30 @@ import Foundation
 print("Введите город в котором хотите узнать прогноз погоды на ближайшие 3 дня:")
 
 let city = readLine()!
-func city(bishkek: String){
-    if city == "Бишкек"{
+func city(bishkek: String,cholpon: String, talas: String,osh: String,jalal: String,naryn: String,batken: String){
+    if city.lowercased() == "Бишкек".lowercased(){
         print("В Бишкеке сегодня 15 градусов, завтра будет 7 градусов, а послезавтра 0 градусов")
     }
-}
-city(bishkek: "bishkek")
-func city(cholpon: String){
-    if city == "Чолпон-Ата"{
+    if city.lowercased() == "Чолпон-Ата".lowercased(){
         print("В Чолпон-Ате сегодня 12 градусов, завтра 17 градусов, а послезавтра 20 градусов")
     }
-}
-city(cholpon: "cholpon")
-func city(talas: String){
-    if city == "Талас"{
+    if city.lowercased() == "Талас".lowercased(){
         print("В Таласе сегодня 7 градусов, завтра 6 градусов, а послезавтра 5 градусов")
     }
-}
-city(talas: "talas")
-func city(osh: String){
-    if city == "Ош"{
+    if city.lowercased() == "Ош".lowercased(){
         print("В Оше сегодня 10 градусов, завтра 14 градусов, а послезавтра 21 градусов")
     }
-}
-city(osh: "osh")
-func city(jalal: String){
-    if city == "Джалал-Абад"{
+    if city.lowercased() == "Джалал-Абад".lowercased(){
         print("В Джалал-Абаде сегодня 3 градуса, завтра 8 градусов, а послезавтра 10 градусов")
     }
-}
-city(jalal: "jalal")
-func city(naryn: String){
-    if city == "Нарын"{
+    if city.lowercased() == "Нарын".lowercased(){
         print("В Нарыне сегодня 9 градусов, завтра 18 градусов, а послезавтра 27 градусов")
     }
-}
-city(naryn: "naryn")
-func city(batken: String){
-    if city == "Баткен"{
+    if city.lowercased() == "Баткен".lowercased(){
         print("В Баткене сегодня 1 градус, завтра - 3 градуса, а послезавтра 5 градусов")
     }
 }
-city(batken: "batken")
+city(bishkek: "bishkek", cholpon: "cholpon", talas: "talas", osh: "osh", jalal: "jalal", naryn: "naryn", batken: "batken")
 ////2-ое задание
 
 var nitro = 65
